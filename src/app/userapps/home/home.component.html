@@ -1,0 +1,14 @@
+<p>home works!</p>
+
+<p>Is the boolean true? : {{aBool | bool: "fr"}}</p>
+<table>
+    <div>
+        <label>Search:</label>
+        <input [(ngModel)]="search" type="text">
+    </div>
+    <tr *ngFor="let o of objs | search:search | sort: 'title':false">
+        <td>{{o.id}}</td>
+        <td>{{o.title}}</td>
+        <td>{{o.count}}</td>
+    </tr>
+</table>
